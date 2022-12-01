@@ -17,4 +17,7 @@ calories.forEach((calory: string): void => {
 
 const elveWithMoreCalories = elveTotalCaloriesArray.reduce((totalCaloryA: string, totalCaloryB: string) => totalCaloryA > totalCaloryB ? totalCaloryA : totalCaloryB );
 
-console.log(elveWithMoreCalories);
+const sortedElveTotalCaloriesArray = elveTotalCaloriesArray.sort((totalCaloryA: string, totalCaloryB: string) => totalCaloryA > totalCaloryB ? -1 : 1);
+
+const totalTopThreeElveCalories = sortedElveTotalCaloriesArray[0] + sortedElveTotalCaloriesArray[1] + sortedElveTotalCaloriesArray[2]; 
+
